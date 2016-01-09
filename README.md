@@ -23,7 +23,7 @@ Fetch info from a youtube video
 use YouTubeUtils\YouTubeVideo;
 
 
-$apiKey = "AIzaSyCgcYM2L79l0BI18EgwbtPoPLGh3kd_Ha4";
+$apiKey = "AIzaSyCgcYM2L79l0BI18EgwbtPoPLGh3kd_Ha4"; // ask google for one...
 $videoId = 'hGHrp2C9u28';
 $videoId = 'trQbQP2n_9U';
 
