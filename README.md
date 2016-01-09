@@ -13,6 +13,28 @@ YouTubeUtils can be installed as a [planet](https://github.com/lingtalfi/Observe
 
 
 
+Extract video id from a youtube url
+---------------------------------------
+
+
+```php
+<?php
+
+
+use YouTubeUtils\YouTubeTool;
+
+require_once "bigbang.php";
+
+
+$url = 'https://www.youtube.com/watch?v=trQbQP2n_9U';
+
+
+a(YouTubeTool::getId($url)); // trQbQP2n_9U
+```
+
+
+
+
 Fetch info from a youtube video 
 ----------------------
 
@@ -63,6 +85,10 @@ string 'https://i.ytimg.com/vi/trQbQP2n_9U/default.jpg' (length=46)
 
 History Log
 ------------------
+    
+- 1.1.0 -- 2016-01-09
+
+    - add YouTubeTool
     
 - 1.0.0 -- 2016-01-09
 
