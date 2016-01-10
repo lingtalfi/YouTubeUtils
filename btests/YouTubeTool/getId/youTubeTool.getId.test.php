@@ -44,6 +44,7 @@ $a = [
     "http://www.youtube.com/watch?dev=inprogress&v=nCwRJUg3tcQ&feature=related",
     // not youtube
     "http://www.zoutube.com/watch?dev=inprogress&v=nCwRJUg3tcQ&feature=related",
+    "http://www.you.tube.com/watch?dev=inprogress&v=nCwRJUg3tcQ&feature=related",
 ];
 
 $b = [
@@ -79,6 +80,7 @@ $b = [
     'nCwRJUg3tcQ',
     'nCwRJUg3tcQ',
     // not youtube
+    false,
     false,
 ];
 
