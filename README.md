@@ -94,6 +94,10 @@ Related
 History Log
 ------------------
     
+- 1.2.0 -- 2016-02-13
+
+    - add YouTubeVideo.setOnNoResultCb method to handle the case where the result is empty
+    
 - 1.1.0 -- 2016-01-09
 
     - add YouTubeTool

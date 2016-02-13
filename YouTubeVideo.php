@@ -32,6 +32,7 @@ class YouTubeVideo
     private $apiKey;
     private $id;
     private $onApiBadInterpretationCb;
+    private $onNoResultCb;
     //
     private $item;
 
@@ -58,6 +59,12 @@ class YouTubeVideo
     public function setOnApiBadInterpretationCb(callable $onApiBadInterpretationCb)
     {
         $this->onApiBadInterpretationCb = $onApiBadInterpretationCb;
+        return $this;
+    }
+
+    public function setOnNoResultCb(callable $onNoResultCb)
+    {
+        $this->onNoResultCb = $onNoResultCb;
         return $this;
     }
 
@@ -174,12 +181,17 @@ class YouTubeVideo
                         }
                         throw new YouTubeRequestErrorException($msg);
                     }
-                    else{
-                        if(isset($response['items'][0])){
-                        	$this->item = $response['items'][0];
+                    else {
+                        if (!empty($response['items'])) {
+                            if (isset($response['items'][0])) {
+                                $this->item = $response['items'][0];
+                            }
+                            else {
+                                $this->onApiBadInterpretation("items.0 not found");
+                            }
                         }
-                        else{
-                            $this->onApiBadInterpretation("items.0 not found");
+                        else {
+                            $this->onNoResult("No result for video with id: $this->id");
                         }
                     }
                 }
@@ -202,7 +214,18 @@ class YouTubeVideo
         if (null !== $this->onApiBadInterpretationCb) {
             call_user_func($this->onApiBadInterpretationCb, $msg);
         }
-        throw new ApiBadInterpretationException();
+        throw new ApiBadInterpretationException($msg);
+    }
+
+
+    private function onNoResult($msg)
+    {
+        if (null !== $this->onNoResultCb) {
+            call_user_func($this->onNoResultCb, $msg);
+        }
+        else {
+            trigger_error($msg, E_USER_NOTICE);
+        }
     }
 
     private function renew()
