@@ -1,6 +1,6 @@
 <?php
 
-namespace YouTubeUtils;
+namespace Ling\YouTubeUtils;
 
 /*
  * LingTalfi 2016-01-09
@@ -21,9 +21,9 @@ namespace YouTubeUtils;
  * @throws ApiBadInterpretationException when the class used the api in a wrong way (helps detecting api changes)
  * 
  */
-use YouTubeUtils\Exception\ApiBadInterpretationException;
-use YouTubeUtils\Exception\YouTubeRequestErrorException;
-use YouTubeUtils\Exception\YouTubeUtilsException;
+use Ling\YouTubeUtils\Exception\ApiBadInterpretationException;
+use Ling\YouTubeUtils\Exception\YouTubeRequestErrorException;
+use Ling\YouTubeUtils\Exception\YouTubeUtilsException;
 
 class YouTubeVideo
 {

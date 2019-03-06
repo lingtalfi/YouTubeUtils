@@ -1,6 +1,6 @@
 <?php
 
-namespace YouTubeUtils;
+namespace Ling\YouTubeUtils;
 
 /*
  * LingTalfi 2016-01-09

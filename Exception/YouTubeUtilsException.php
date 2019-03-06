@@ -1,6 +1,6 @@
 <?php
 
-namespace YouTubeUtils\Exception;
+namespace Ling\YouTubeUtils\Exception;
 
 /*
  * LingTalfi 2016-01-09

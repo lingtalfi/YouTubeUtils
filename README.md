@@ -16,7 +16,7 @@ Install
 ==========
 Using the [uni](https://github.com/lingtalfi/universe-naive-importer) command.
 ```bash
-uni import YouTubeUtils
+uni import Ling/YouTubeUtils
 ```
 
 
@@ -29,7 +29,7 @@ Extract video id from a youtube url
 <?php
 
 
-use YouTubeUtils\YouTubeTool;
+use Ling\YouTubeUtils\YouTubeTool;
 
 require_once "bigbang.php";
 
@@ -50,7 +50,7 @@ Fetch info from a youtube video
 ```php
 <?php
 
-use YouTubeUtils\YouTubeVideo;
+use Ling\YouTubeUtils\YouTubeVideo;
 
 
 $apiKey = "YOUR_YOUTUBE_API_KEY"; // ask google for one...
